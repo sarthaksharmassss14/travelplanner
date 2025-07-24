@@ -11,6 +11,7 @@ An intelligent travel planner that helps you generate personalized itineraries, 
 
 
 🚀 Features
+
 • 📄 Dynamic itinerary generator based on destination, budget, and travel style  
 • 💸 Real-time cost breakdown and activity suggestions  
 • 🌦️ Weather-based recommendations  
