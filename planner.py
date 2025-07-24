@@ -44,7 +44,7 @@ def generate_itinerary(destination, days, budget, interests, travel_style="budge
     # Append cost breakdown to interests or inject it creatively into the prompt
     interests_with_costs = f"{interests}. Estimated costs: {cost_estimates}"
     
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=GOOGLE_API_KEY)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=GOOGLE_API_KEY)
     chain = LLMChain(llm=llm, prompt=prompt_template)
     result = chain.run({
         "destination": destination,
@@ -59,7 +59,7 @@ def generate_itinerary(destination, days, budget, interests, travel_style="budge
 
 
 def get_cost_estimates(destination, days, travel_style):
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=GOOGLE_API_KEY)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=GOOGLE_API_KEY)
 
     cost_prompt = f"""
 You are a travel expert. Estimate the following costs (in INR) for a {days}-day {travel_style.lower()} trip from India to {destination}.
