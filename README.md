@@ -1,10 +1,12 @@
 🌍 AI Travel Planner 🧳
+
 An intelligent travel planner that helps you generate personalized itineraries, cost estimates, current weather forecast and destination insights — powered by LangChain, Google Gemini, and built with Streamlit.
 
 
 ---
 
 🚀 Demo
+
 🌐 Live App: https://travelplanner-r0tg.onrender.com
 
 ---
@@ -22,6 +24,7 @@ An intelligent travel planner that helps you generate personalized itineraries, 
 ---
 
 🛠 Tech Stack:
+
 •  Python  
 •  Streamlit  
 •  LangChain  
