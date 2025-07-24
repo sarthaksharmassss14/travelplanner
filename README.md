@@ -10,20 +10,20 @@ An intelligent travel planner that helps you generate personalized itineraries, 
 ---
 
 🚀 Features:
-📄 🔍 Dynamic itinerary generator based on destination, budget, and travel style
-🧾 Real-time cost breakdown and activity suggestions
-🌦️ Weather-based recommendations
-🧠 Powered by LangChain + Google Generative AI (Gemini)
-🎯 Clean and interactive UI via Streamlit
-🟩 Deployed for free on Render
+-🔍 Dynamic itinerary generator based on destination, budget, and travel style
+-💸 Real-time cost breakdown and activity suggestions
+-🌦️ Weather-based recommendations
+-🧠 Powered by LangChain + Google Generative AI (Gemini)
+-🎯 Clean and interactive UI via Streamlit
+-🟩 Deployed for free on Render
 
 ---
 
 🛠 Tech Stack:
-Python
-Streamlit
-Langchain
-Gemini
-Pexels API
-Weatherstack API
+-Python
+-Streamlit
+-Langchain
+-Gemini
+-Pexels API
+-Weatherstack API
 
