@@ -46,12 +46,16 @@ st.markdown("### Plan your custom trip with AI suggestions.")
 with st.form("trip_form"):
     col1, col2 = st.columns(2)
     with col1:
-        destination = st.text_input("📍Destination (correct spelling please)")
+        source_city = st.text_input("🏁Source City (correct spelling please)")
+        
         days = st.number_input("📅Number of days", min_value=1, max_value=30)
-    with col2:
         interests = st.text_input("💡Your interests (e.g., nature, food, history)")
+    with col2:
+        destination = st.text_input("📍Destination (correct spelling please)")
         travel_style = st.selectbox("🧭Travel style", ["Budget", "Mid-range", "Luxury"], index=0)
     submitted = st.form_submit_button("Generate Itinerary")
+
+
 
 def fetch_destination_images(destination, count=5):
     headers = {
@@ -118,7 +122,7 @@ if submitted:
 
             # === Generate Gemini Itinerary with embedded costs ===
             with st.spinner("✈️ Generating itinerary (may take a minute)..."):
-                cost_str, itinerary_str = generate_itinerary(destination, days, "Not specified", interests, travel_style)
+                cost_str, itinerary_str = generate_itinerary(destination, days, source_city, interests, travel_style)
 
             # === Add emojis dynamically ===
             def add_emojis(text):
@@ -141,7 +145,7 @@ if submitted:
             for i, block in enumerate(day_blocks):
                 if not block.strip():
                     continue
-                day_title = f"Day {i}" if i > 0 else "Introduction"
+                day_title = f"Day {i}" if i > 0 else "Here is your personalised trip"
                 with st.expander(f"📌 {day_title}"):
                     st.markdown("### " + block.strip().split("\n")[0])  # Subtitle
                     for line in block.strip().split("\n")[1:]:
@@ -180,5 +184,6 @@ if submitted:
             else:
                 st.info("Weather info not available.")
 
+            
         except Exception as e:
             st.error(f"Something went wrong: {e}")
