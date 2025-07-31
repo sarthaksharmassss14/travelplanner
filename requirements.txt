@@ -5,6 +5,3 @@ python-dotenv
 requests
 geopy
 google-generativeai
-sentence-transformers
-faiss-cpu
-pypdf
